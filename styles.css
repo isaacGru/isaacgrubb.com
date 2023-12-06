@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-container a:hover {
+    text-decoration: underline;
+}
+
+.main-name, .name-logo, .project-title, .project-description {
+    text-align: center;
+}
+
+.main-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.name-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project {
+    margin: 40px 0;
+}
+
+.project-title, .project-description {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.project-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+
+
+
+/* Image container styling */
+.images-container,
+.fashion-freedom-container,
+.memory-container,
+.grubb-remnantsOfPoliticalCatastrophe-container,
+.soap-figures,
+.heliotropism-container,
+.impulse-container,
+.traces-container,
+.code-container {
+    display: grid;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+/* Grid template columns */
+.heliotropism-container, 
+.grubb-remnantsOfPoliticalCatastrophe-container, 
+.code-container, 
+.traces-container{
+    grid-template-columns: repeat(3, 1fr);
+}
+.impulse-container, 
+.images-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.memory-container,
+.soap-figures, 
+.fashion-freedom-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Image styles */
+.images-container img, 
+.fashion-freedom-container img, 
+.memory-container img, 
+.grubb-remnantsOfPoliticalCatastrophe-container img, 
+.soap-figures img, 
+.heliotropism-container img, 
+.impulse-container img, 
+.traces-container img, 
+.code-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for images when they're not expanded */
+.scalable {
+    transition: box-shadow 0.2s ease;
+}
+
+.scalable:hover {
+    opacity: 0.89; /* Slight transparency */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.819);
+}
+
+/* Expanded Image Styling */
+.expanded-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;        /* Max width of 90% of the viewport width */
+    max-height: 90vh;       /* Max height of 90% of the viewport height */
+    z-index: 1000;
+    object-fit: contain;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Shadow to make the image pop */
+}
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.947); /* Semi-transparent black background */
+    z-index: 999; /* Below the expanded image but above everything else */
+    display: none; /* Hidden by default */
+}
+
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the container */
+    max-width: 1100px; /* Maximum width preferred */
+    margin: 20px auto; /* Centers the video container horizontally */
+    position: relative; /* For absolute positioning of iframe or video */
+    /* padding-top: 56.25%; Aspect ratio of 16:9 */
+}
+
+.video-container iframe,
+.video-container video {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%; /* Full width */
+    /* height: 100%; Full height based on padding-top of parent */
+    aspect-ratio: 16 / 9; /* Maintain the aspect ratio of 16:9 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Artist description styling */
+.artist-description {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    font-size: 16px;
+    width: 70%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* Exhibitions/Commissions header styling */
+h2.exhibitions-header {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Individual exhibitions/commissions styling */
+.exhibitions > div {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+/* Link styling within exhibitions/commissions */
+.exhibitions a {
+    text-decoration: none;
+    color: inherit; /* Inherits the color of the parent element */
+}
+
+.exhibitions a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    .header-container {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-container a {
+        margin-bottom: 10px;
+    }
+
+    .main-name {
+        font-size: 28px;
+    }
+
+    .name-logo {
+        font-size: 16px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+
+    .artist-description {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .images-container, 
+    .fashion-freedom-container, 
+    .memory-container, 
+    .grubb-remnantsOfPoliticalCatastrophe-container, 
+    .soap-figures, 
+    .heliotropism-container, 
+    .impulse-container, 
+    .traces-container, 
+    .code-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
