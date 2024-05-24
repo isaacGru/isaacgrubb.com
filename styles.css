@@ -1,9 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
     margin: 0;
     padding: 0;
-    background-color: #F8F9FA;
-    color: #333;
+    background-color: #E4E2DD;
+    color: #292929;
     line-height: 1.6;
 }
 
@@ -12,22 +13,36 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #FFFFFF;
+    background-color: #E4E2DD;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .header-container a {
     text-decoration: none;
-    color: black;
+    color: #292929;
 }
 
 .header-container a:hover {
     text-decoration: underline;
 }
 
-.main-name, .name-logo, .project-title, .project-description {
+
+.nav-links a {
+    text-decoration: none;
+    color: #292929;
+    padding: 0 15px; /* Adjust padding as needed */
+    border-right: 3px solid #292929; /* Adds a vertical line between items */
+}
+
+.nav-links a:last-child {
+    border-right: none; /* Removes the border from the last link */
+}
+
+
+.main-name, .name-logo, .name-logo2, .project-title, .project-description {
     text-align: center;
 }
+
 
 .main-name {
     font-size: 32px;
@@ -35,6 +50,12 @@ body {
 }
 
 .name-logo {
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.name-logo2 {
     font-size: 18px;
     font-weight: bold;
 }
@@ -45,7 +66,7 @@ body {
 
 .project-title, .project-description {
     font-family: 'Courier New', Courier, monospace;
-    color: black;
+    color: #292929;
 }
 
 .project-title {
@@ -214,9 +235,11 @@ h2.exhibitions-header {
 /* Footer styling */
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: Arial, sans-serif;
 }
+
+
 
 /* Responsive design for mobile devices */
 @media screen and (max-width: 768px) {
@@ -235,6 +258,10 @@ footer {
     }
 
     .name-logo {
+        font-size: 16px;
+    }
+
+    .name-logo2 {
         font-size: 16px;
     }
 
